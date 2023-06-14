@@ -1,7 +1,5 @@
-from django.contrib import admin
-from django.urls import include, path
+from django.http import HttpResponse
+from django.shortcuts import render
 
-urlpatterns = [
-    path('polls/', include('polls.urls')),
-    path('admin/', admin.site.urls),
-]
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
